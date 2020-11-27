@@ -46,9 +46,11 @@ class RunMonitoring():
                                 return_message = f'Wrong format type /help'
                                 client.send(Message(text=return_message), thread_id=thread_id, thread_type=thread_type)
                         elif message.text == "/wbspawn":
+                            current_time = datetime.datetime.now()
                             return_message = self.doSomething()
                             print(self.doSomething())
                             client.send(Message(text=return_message), thread_id=thread_id, thread_type=thread_type)
+                            client.send(Message(text=current_time), thread_id=thread_id, thread_type=thread_type)
                         elif message.text == "/latestcode":
                             return_message = "Vvxjtpo5Qn (November 1, 2020)\n\nvhaz5npul (2k PDO)"
                             client.send(Message(text=return_message), thread_id=thread_id, thread_type=thread_type)
