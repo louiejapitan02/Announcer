@@ -187,7 +187,7 @@ class RunMonitoring():
         returnMessage = ""
         help = ['/wbspawn', '/wbset name 00:00', '/latestcode']
         time2 = 0
-        while time2 < 7:
+        while time2 < 3:
             returnMessage += f'{help[time2]}\n'
             time2 = time2 + 1
         return returnMessage
